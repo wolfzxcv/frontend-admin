@@ -58,7 +58,8 @@
         </div>
         <!-- form-group.// -->
         <p class="text-center">
-          <NuxtLink to="/" class="text-success">忘記密碼?</NuxtLink> |
+          <NuxtLink to="/" class="text-success">忘記密碼?</NuxtLink>
+          |
           <NuxtLink to="/register" class="text-success">註冊會員</NuxtLink>
         </p>
       </form>

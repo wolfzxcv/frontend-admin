@@ -14,7 +14,7 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
-    'no-undef': 'off',
+    'no-undef': 'warn',
     'prettier/prettier': 'warn',
 
     /*****************************************
@@ -81,7 +81,7 @@ module.exports = {
      **********************************/
 
     'import/no-unresolved': [
-      'off',
+      'warn',
       {
         caseSensitive: true,
       },
