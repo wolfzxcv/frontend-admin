@@ -82,7 +82,7 @@
           />
 
           <p class="text-center">
-            已經有帳號?
+            {{ $tc('register.already_have_an_account') }}
             <NuxtLink to="/login" class="text-success">{{
               $tc('login')
             }}</NuxtLink>

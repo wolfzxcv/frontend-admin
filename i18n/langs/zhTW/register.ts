@@ -8,6 +8,7 @@ export const register: Register = {
   forgot_password: '忘記密碼?',
   registration: '註冊會員',
   register: '註冊',
+  already_have_an_account: '已經有帳號?',
   profile_picture: '大頭貼',
   birthday: '出生西元年月日',
 }

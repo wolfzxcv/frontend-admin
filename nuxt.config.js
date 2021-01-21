@@ -48,7 +48,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '~/modules/vue2-datepicker',
     '~/modules/vee-validate',
+    '@nuxtjs/apollo',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
@@ -63,6 +65,14 @@ export default {
    ** I18n module configuration
    */
   i18n: i18nConfig,
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.API_URL,
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

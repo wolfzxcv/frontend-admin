@@ -17,6 +17,8 @@ export type Register = {
   registration: string
   /** 註冊 */
   register: string
+  /** 已經有帳號  */
+  already_have_an_account: string
   /** 大頭貼 */
   profile_picture: string
   /** 出生西元年月日 */

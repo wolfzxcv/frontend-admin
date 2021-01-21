@@ -25,6 +25,7 @@
     "Mixins",
     "multiselect",
     "nuxt",
+    "nuxtjs",
     "Scrollable",
     "sweetalert",
     "vuex"

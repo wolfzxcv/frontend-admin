@@ -8,6 +8,7 @@ export const register: Register = {
   forgot_password: 'Forgot password?',
   registration: 'Register',
   register: 'Register',
+  already_have_an_account: 'Already have an account?',
   profile_picture: 'profile picture',
   birthday: 'birthday',
 }
