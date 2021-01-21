@@ -8,7 +8,7 @@ export default function assignOwn<T, S>(
   const pickProps = Object.keys(destination)
 
   if (ignores) {
-    pickProps.filter(props => !ignores.includes(props))
+    pickProps.filter((props) => !ignores.includes(props))
   }
 
   return Object.assign(destination, pick(source, pickProps))

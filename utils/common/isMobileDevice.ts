@@ -6,9 +6,9 @@ export default function isMobileDevice() {
     'iPad',
     'iPod',
     'BlackBerry',
-    'Windows Phone'
+    'Windows Phone',
   ]
-  return mobileDevices.some(mobileDevice =>
+  return mobileDevices.some((mobileDevice) =>
     window.navigator.userAgent.match(mobileDevice)
   )
 }

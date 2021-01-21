@@ -31,7 +31,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/i18n' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,8 +44,11 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '~/modules/vee-validate',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // Doc: https://i18n.nuxtjs.org/

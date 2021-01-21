@@ -15,6 +15,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     'no-undef': 'warn',
+    'import/named': 'warn',
     'prettier/prettier': 'warn',
 
     /*****************************************

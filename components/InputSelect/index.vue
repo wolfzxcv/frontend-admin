@@ -20,7 +20,7 @@
       <span>查無資料</span>
     </template>
 
-    <template v-for="(_, slot) in $scopedSlots" v-slot:[slot]="slotData">
+    <template v-for="(_, slot) in $scopedSlots" #[slot]="slotData">
       <slot :name="slot" v-bind="slotData" />
     </template>
   </VueMultiselect>

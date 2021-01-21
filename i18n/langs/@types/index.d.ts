@@ -5,13 +5,15 @@ import { Common } from './common'
 import { Components } from './components'
 import { Main } from './main'
 import { Notify } from './notify'
+import { Register } from './register'
 import { Sweetalert } from './sweetalert'
 
 type Message = {
   components: Components
-  notify: Notify
-  sweetalert: Sweetalert
   main: Main
+  notify: Notify
+  register: Register
+  sweetalert: Sweetalert
 } & Common
 
 export type Locales = 'en' | 'zh-tw'

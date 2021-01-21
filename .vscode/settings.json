@@ -1,0 +1,53 @@
+{
+  // Editor
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Javascript and Typescript
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+
+  // Vetur
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.ts": "none",
+  "vetur.languageFeatures.codeActions": false,
+  "vetur.trace.server": "verbose",
+  "vetur.validation.style": false,
+
+  "cSpell.words": [
+    "fontawesome",
+    "fortawesome",
+    "Mixins",
+    "multiselect",
+    "nuxt",
+    "Scrollable",
+    "sweetalert",
+    "vuex"
+  ],
+
+  // vscode 效能優化
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/.svn": true,
+  //   "**/.hg": true,
+  //   "**/CVS": true,
+  //   "**/.DS_Store": true,
+  //   "**/tmp": true,
+  //   "**/bower_components": true,
+  //   "**/dist": true
+  // },
+  // "files.watcherExclude": {
+  //   "**/.git/objects/**": true,
+  //   "**/.git/subtree-cache/**": true,
+  //   "**/node_modules/**": true,
+  //   "**/tmp/**": true,
+  //   "**/bower_components/**": true,
+  //   "**/dist/**": true
+  // },
+  "search.followSymlinks": false
+}
