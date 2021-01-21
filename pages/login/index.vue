@@ -5,11 +5,7 @@
       <hr />
       <ValidationObserver ref="observer" v-slot="validation" slim>
         <form>
-          <LoginFormInput>
-            <template #icon>
-              <i aria-hidden="true" class="fa fa-user"></i>
-            </template>
-
+          <RegisterFormInput icon-class="fa fa-user">
             <template>
               <input
                 v-model.trim="loginForm.username"
@@ -18,13 +14,9 @@
                 type="text"
               />
             </template>
-          </LoginFormInput>
+          </RegisterFormInput>
 
-          <LoginFormInput>
-            <template #icon>
-              <i aria-hidden="true" class="fa fa-lock"></i>
-            </template>
-
+          <RegisterFormInput icon-class="fa fa-lock">
             <template>
               <input
                 v-model.trim="loginForm.password"
@@ -33,36 +25,26 @@
                 type="password"
               />
             </template>
-          </LoginFormInput>
+          </RegisterFormInput>
 
-          <LoginFormInput>
-            <template #icon>
-              <i aria-hidden="true" class="fas fa-key"></i>
-            </template>
-
+          <RegisterFormInput icon-class="fas fa-key">
             <template>
               <input
-                v-model.trim="loginForm.checkCode"
+                v-model.trim="loginForm.verificationCode"
                 class="form-control"
                 :placeholder="$tc('register.verification_code')"
                 type="text"
               />
               <Identify ref="identify" v-model="codes" class="mx-2" />
             </template>
-          </LoginFormInput>
+          </RegisterFormInput>
 
-          <!-- form-group// -->
-          <div class="form-group">
-            <button
-              type="submit"
-              :disabled="validation.invalid"
-              class="btn btn-primary btn-block"
-              @click="handleLogin"
-            >
-              {{ $tc('login') }}
-            </button>
-          </div>
-          <!-- form-group.// -->
+          <FormSubmitBtn
+            :disabled="validation.invalid"
+            :btn-word="$tc('login')"
+            @click-handler="handleLogin"
+          />
+
           <p class="text-center">
             <NuxtLink to="/" class="text-success">{{
               $tc('register.forgot_password')
@@ -82,14 +64,14 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { ValidationObserver } from 'vee-validate'
-import { LoginFormInput } from './components'
 import { LoginForm } from '~/@types'
-import { Identify } from '~/components'
+import { FormSubmitBtn, RegisterFormInput, Identify } from '~/components'
 
 @Component({
   components: {
+    FormSubmitBtn,
     Identify,
-    LoginFormInput,
+    RegisterFormInput,
     ValidationObserver,
   },
   layout: 'default',
@@ -104,7 +86,7 @@ export default class extends Vue {
   loginForm: LoginForm = {} as LoginForm
 
   handleLogin() {
-    if (this.loginForm.checkCode !== this.codes) {
+    if (this.loginForm.verificationCode !== this.codes) {
       alert('驗證碼錯誤')
     }
   }

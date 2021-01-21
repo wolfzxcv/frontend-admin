@@ -5,7 +5,7 @@
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text">
-            <slot name="icon" />
+            <i aria-hidden="true" :class="iconClass"></i>
           </span>
         </div>
         <slot />
@@ -26,7 +26,7 @@ import { ValidationProvider } from 'vee-validate'
   components: {
     ValidationProvider,
   },
-  name: 'LoginFormInput',
+  name: 'RegisterFormInput',
 })
 export default class extends Vue {
   @Prop({ type: Boolean, default: false })
@@ -34,5 +34,8 @@ export default class extends Vue {
 
   @Prop({ type: String, default: 'required' })
   rules!: string
+
+  @Prop({ type: String, required: true })
+  iconClass!: string
 }
 </script>

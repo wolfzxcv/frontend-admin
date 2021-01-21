@@ -1,5 +1,5 @@
 export interface LoginForm {
   username: string
   password: string
-  checkCode: string
+  verificationCode: string
 }
