@@ -1,0 +1,167 @@
+// 使 ios touch 滑動滑順
+*,
+::after,
+::before {
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body {
+  height: 100%; // footer 需要一直置底
+  font-family: $font_family;
+  color: $black-500;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
+}
+button:focus {
+  outline: none;
+}
+a {
+  // text-decoration: underline;
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+  &:active {
+    font-weight: 600;
+  }
+  &.nav-link {
+    text-decoration: none;
+  }
+}
+.w-1 {
+  //限縮表格寬度用
+  width: 1px;
+}
+.w-90 {
+  width: 90%;
+}
+.w-275px {
+  width: 275px;
+}
+.w-280px {
+  width: 280px;
+}
+.min-w-110 {
+  min-width: 110px;
+}
+.ml-20 {
+  margin-left: 20px !important;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.fixed-bottom-mb {
+  margin-bottom: 50px;
+  @media (max-width: 991px) {
+    margin-bottom: 0px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+  }
+}
+.h-min-vh-70 {
+  min-height: 70vh;
+}
+@media (min-width: 992px) {
+  .mb-lg-10 {
+    margin-bottom: 10px;
+  }
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-grab {
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+}
+@media (min-width: 1200px) {
+  .text-xl-nowrap {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 992px) {
+  .text-lg-nowrap {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) {
+  .text-md-nowrap {
+    white-space: nowrap;
+  }
+  .flex-md-nowrap {
+    flex-wrap: nowrap;
+    .btn {
+      white-space: nowrap;
+    }
+  }
+}
+
+/*
+| border
+*/
+.border-grey {
+  border: 1px solid $grey-200;
+}
+.border-bottom {
+  border-bottom: 1px solid #000;
+  &-grey {
+    border-bottom-color: $grey-200;
+  }
+}
+.border-top {
+  &-grey {
+    border-top: 1px solid $grey-200;
+  }
+}
+.line-bottom {
+  border-bottom: solid 1px #d8d8d8;
+}
+/*
+| border end
+*/
+
+/*
+| 字體
+*/
+.color {
+  &-red {
+    color: $red-500;
+  }
+  &-lightRed {
+    color: $red-400;
+  }
+  &-white {
+    color: #fff;
+  }
+  &-blue {
+    color: #337eb5;
+  }
+  &-green {
+    color: $green-500;
+  }
+  &-orange {
+    color: $orange-400;
+  }
+  &-grey {
+    color: $black-400;
+  }
+}
+.text-small {
+  font-size: 13px;
+}
+.text-blod {
+  font-weight: 600;
+}
+.small,
+small {
+  font-size: 13px;
+}

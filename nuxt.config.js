@@ -31,6 +31,7 @@ export default {
     '@fortawesome/fontawesome-free/scss/solid.scss',
     'sweetalert2/dist/sweetalert2.min.css',
     'vue-loading-overlay/dist/vue-loading.css',
+    'vue-multiselect/dist/vue-multiselect.min.css',
     'bootstrap/scss/bootstrap.scss',
   ],
 

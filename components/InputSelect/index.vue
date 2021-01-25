@@ -6,7 +6,7 @@
     :options="formatOptions"
     :value="internalValue"
     :show-labels="showLabels"
-    placeholder="請選擇"
+    :placeholder="setPlaceholder"
     :track-by="trackBy"
     :select-all="selectAll"
     :searchable="searchable"
@@ -30,8 +30,8 @@
 import { isEqual } from 'lodash'
 import { Component, mixins, Ref, Prop, Watch } from 'nuxt-property-decorator'
 import VueMultiselect from 'vue-multiselect'
-
 import { FixIEClickActivateMixins } from './mixins'
+import { notEmpty } from '~/utils'
 
 @Component({
   components: {
@@ -59,8 +59,12 @@ export default class extends mixins(FixIEClickActivateMixins) {
   showLabels!: boolean
 
   /** 是否可搜尋 */
-  @Prop({ type: Boolean, default: true })
+  @Prop({ type: Boolean, default: false })
   searchable!: boolean
+
+  /** placeholder */
+  @Prop({ type: String })
+  placeholder!: string
 
   /** ID Key */
   @Prop({ type: String })
@@ -84,6 +88,12 @@ export default class extends mixins(FixIEClickActivateMixins) {
 
   /** 暫存選項, reduce 使用 */
   optionsCache: any[] = []
+
+  get setPlaceholder(): string {
+    return notEmpty(this.placeholder)
+      ? this.placeholder
+      : this.$tc('please_select')
+  }
 
   get formatOptions() {
     if (!this.options.length) {
