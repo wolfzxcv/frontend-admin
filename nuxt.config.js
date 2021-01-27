@@ -31,6 +31,7 @@ export default {
     '@fortawesome/fontawesome-free/scss/solid.scss',
     'sweetalert2/dist/sweetalert2.min.css',
     'vue-loading-overlay/dist/vue-loading.css',
+    'vue-multiselect/dist/vue-multiselect.min.css',
     'bootstrap/scss/bootstrap.scss',
   ],
 
@@ -48,7 +49,10 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '~/modules/base-components',
+    '~/modules/vue2-datepicker',
     '~/modules/vee-validate',
+    '@nuxtjs/apollo',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
@@ -57,12 +61,24 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://i18n.nuxtjs.org/
     'nuxt-i18n',
+    /**
+     * 引入內部 css，需放最後去覆蓋套件的css
+     */
+    '~/modules/import-css',
   ],
 
   /*
    ** I18n module configuration
    */
   i18n: i18nConfig,
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.API_URL,
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

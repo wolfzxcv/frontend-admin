@@ -133,3 +133,9 @@ export default class extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+textarea {
+  overflow: hidden;
+}
+</style>
