@@ -49,6 +49,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '~/modules/base-components',
     '~/modules/vue2-datepicker',
     '~/modules/vee-validate',
     '@nuxtjs/apollo',

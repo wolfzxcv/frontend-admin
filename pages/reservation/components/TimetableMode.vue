@@ -23,13 +23,11 @@ import DeleteBtn from './DeleteBtn.vue'
 import ReservationHeader from './ReservationHeader.vue'
 import { Timetable } from '~/@types'
 import { TableColumns } from '~/modules/base-components/@types'
-import Table from '~/modules/base-components/components/Table.vue'
 
 @Component({
   components: {
     DeleteBtn,
     ReservationHeader,
-    Table,
   },
   name: 'TimetableMode',
 })
