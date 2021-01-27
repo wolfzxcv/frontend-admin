@@ -131,4 +131,3 @@ export default class Table extends Vue {
   }
 }
 </style>
->
