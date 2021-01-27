@@ -1,3 +1,4 @@
+export { default as AppHeader } from './AppHeader/index.vue'
 export { default as FormSubmitBtn } from './FormSubmitBtn/index.vue'
 export { default as Identify } from './Identify/index.vue'
 export { default as InputCheckbox } from './InputCheckbox/index.vue'

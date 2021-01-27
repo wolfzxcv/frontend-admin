@@ -9,7 +9,7 @@ const locales: (string | NuxtVueI18n.Options.LocaleObject)[] = [
     name: 'EN',
   },
   {
-    code: 'zh-tw',
+    code: 'zh-TW',
     iso: 'zh',
     name: '繁',
   },
@@ -25,12 +25,12 @@ const localesCode: string[] = locales.map((locale) => {
 
 const config: NuxtVueI18n.Options.AllOptionsInterface = {
   locales,
-  defaultLocale: 'zh-tw',
+  defaultLocale: 'zh-TW',
   vueI18n: {
-    fallbackLocale: 'zh-tw',
+    fallbackLocale: 'zh-TW',
     messages: {
       en,
-      'zh-tw': zhTW,
+      'zh-TW': zhTW,
     },
   },
   vuex: false,

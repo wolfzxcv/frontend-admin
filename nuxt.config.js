@@ -60,6 +60,10 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://i18n.nuxtjs.org/
     'nuxt-i18n',
+    /**
+     * 引入內部 css，需放最後去覆蓋套件的css
+     */
+    '~/modules/import-css',
   ],
 
   /*

@@ -12,7 +12,6 @@ export const common: Common = {
   recommend_browser_label: '建議瀏覽版本: IE11 以上 1280x1024 解析度為佳',
 
   search_btn_search: '查詢',
-  search_btn_find: '搜尋',
   search_btn_clear: '清除',
   download: '下載',
 
@@ -22,7 +21,7 @@ export const common: Common = {
   update: '更新',
   save: '儲存',
   submit: '送出',
-  view: '查看',
+  view: '預覽',
   handle: '處理',
   modify: '異動',
   select: '選擇',

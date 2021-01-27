@@ -13,7 +13,6 @@ export const common: Common = {
     'IE11 above and resolution of 1024x768 for the best browsing experience. ',
 
   search_btn_search: 'Search',
-  search_btn_find: '搜尋e',
   search_btn_clear: 'Clear',
   download: 'Download',
 

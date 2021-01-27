@@ -27,8 +27,6 @@ export type Common = {
    ********/
   /** 按鈕 - 查詢 */
   search_btn_search: string
-  /** 按鈕 - 搜尋 */
-  search_btn_find: string
   /** 按鈕 - 清除 */
   search_btn_clear: string
   /** 按鈕 - 下載 */
@@ -49,7 +47,7 @@ export type Common = {
   save: string
   /** 送出 */
   submit: string
-  /** 查看 */
+  /** 預覽 */
   view: string
   /** 處理 */
   handle: string

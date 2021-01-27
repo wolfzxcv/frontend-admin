@@ -1,5 +1,13 @@
 import { I18nMessage } from '../@types'
-import { common, components, main, notify, register, sweetalert } from './index'
+import {
+  common,
+  components,
+  main,
+  notify,
+  register,
+  reservation,
+  sweetalert,
+} from './index'
 
 const zhTW: I18nMessage = {
   ...common,
@@ -7,6 +15,7 @@ const zhTW: I18nMessage = {
   main,
   notify,
   register,
+  reservation,
   sweetalert,
 }
 

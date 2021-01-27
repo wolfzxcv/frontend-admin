@@ -1,39 +1,38 @@
 <template>
-  <div class="mt-3 container d-flex flex-column align-items-center">
-    <h2>預約系統</h2>
-    <h3>可預約未來2週的時間</h3>
-    <span>{{ date }}</span>
-    <div class="d-flex">
-      <ReservationDatePicker v-model="date" />
-      <ReservationTimePicker v-model="time" />
-    </div>
+  <div class="mt-3 container">
+    <Component
+      :is="currentComponent"
+      :timetable.sync="timetable"
+      @change-component="setComponentName"
+      @save-handler="save"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { ReservationDatePicker, ReservationTimePicker } from './components'
+import { ReservationMode, TimetableMode } from './components'
+import { Timetable } from '~/@types'
 
 @Component({
   components: {
-    ReservationDatePicker,
-    ReservationTimePicker,
+    ReservationMode,
+    TimetableMode,
   },
   name: 'Reservation',
 })
 export default class extends Vue {
-  date: string = ''
+  /** 目前所顯示的頁籤 component */
+  currentComponent: 'ReservationMode' | 'TimetableMode' = 'ReservationMode'
 
-  time: string[] = []
+  setComponentName(componentName: 'ReservationMode' | 'TimetableMode') {
+    this.currentComponent = componentName
+  }
 
-  outputData: any[] = []
+  save() {
+    console.log('打api,存進資料庫')
+  }
 
-  testCheckbox: string[] = ['aaa', 'bbb', 'ccc']
-
-  checkList: string[] = []
-
-  isEnable: boolean = false
-
-  textarea: string = ''
+  timetable: Timetable[] = []
 }
 </script>
