@@ -1,0 +1,8 @@
+# 取得所有會員
+query users {
+  users {
+    username
+    email
+    createAt
+  }
+}

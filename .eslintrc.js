@@ -14,6 +14,7 @@ module.exports = {
   plugins: ['prettier'],
   // add your custom rules here
   rules: {
+    'no-use-before-define': 'warn',
     'no-undef': 'warn',
     'import/named': 'warn',
     'prettier/prettier': 'warn',

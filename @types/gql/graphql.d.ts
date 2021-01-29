@@ -1,6 +1,7 @@
-declare module '*.graphql' {
+declare module '*/users.graphql' {
   import { DocumentNode } from 'graphql'
+  const defaultDocument: DocumentNode
+  export const users: DocumentNode
 
-  const content: DocumentNode
-  export default content
+  export default defaultDocument
 }

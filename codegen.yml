@@ -1,0 +1,9 @@
+overwrite: true
+documents: 'apollo/*.graphql'
+schema: 'http://18.183.150.247:8081/graphql'
+generates:
+  '@types/gql/graphql.d.ts':
+    - typescript-graphql-files-modules
+  '@types/GraphqlTypes.ts':
+    - typescript
+    - typescript-operations
